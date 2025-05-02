@@ -1,0 +1,119 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Nunito+Sans:ital,opsz,wdth,wght,YTLC@0,6..12,75..125,200..1000,440..540;1,6..12,75..125,200..1000,440..540&display=swap');
+@-webkit-keyframes wiggle1 {
+    0% { -webkit-transform: translate(-5%, 0%); } 
+    10% { -webkit-transform: translate(0%, 0%); }
+    20% { -webkit-transform: translate(0%, 0%); }
+    30% { -webkit-transform: translate(10%, 0%); }
+    40% { -webkit-transform: translate(0%, 0%); }
+    50% { -webkit-transform: translate(50%, 0%); }
+    60% { -webkit-transform: translate(0%, 0%); }
+    70% { -webkit-transform: translate(0%, 0%); }
+    80% { -webkit-transform: translate(-30%, 0%); }
+    90% { -webkit-transform: translate(0%, 0%); }
+    100% { -webkit-transform: translate(0%, 0%); }
+}
+@-webkit-keyframes wiggle2 {
+  0% { -webkit-transform: translate(7%, 0%); } 
+  10% { -webkit-transform: translate(0%, 0%); }
+  20% { -webkit-transform: translate(0%, 0%); }
+  30% { -webkit-transform: translate(30%, 0%); }
+  40% { -webkit-transform: translate(0%, 0%); }
+  50% { -webkit-transform: translate(-25%, 0%); }
+  60% { -webkit-transform: translate(0%, 0%); }
+  70% { -webkit-transform: translate(0%, 0%); }
+  80% { -webkit-transform: translate(0%, 0%); }
+  90% { -webkit-transform: translate(0%, 0%); }
+  100% { -webkit-transform: translate(-5%, 0%); }
+}
+@-webkit-keyframes wiggle3 {
+  0% { -webkit-transform: translate(-7%, 0%); } 
+  10% { -webkit-transform: translate(0%, 0%); }
+  20% { -webkit-transform: translate(0%, 0%); }
+  30% { -webkit-transform: translate(0%, 0%); }
+  40% { -webkit-transform: translate(0%, 0%); }
+  50% { -webkit-transform: translate(25%, 0%); }
+  60% { -webkit-transform: translate(0%, 0%); }
+  70% { -webkit-transform: translate(-50%, 0%); }
+  80% { -webkit-transform: translate(0%, 0%); }
+  90% { -webkit-transform: translate(0%, 0%); }
+  100% { -webkit-transform: translate(5%, 0%); }
+}
+
+
+* {padding:0;margin:0;}
+
+html {width:100%;height:100%;}
+
+body { 
+  width:100%;
+  height:100%;
+  background:#C0C0C0;
+  color:#613AFF;
+  font-family: "Nunito Sans", sans-serif;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+ul {
+
+}
+
+ul:hover {
+
+}
+
+ul li {
+  width:fit-content;
+  height:fit-content;
+  padding: 17px 120px 17px 18px;
+  background-color:#C0C0C0;
+
+  position:relative;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight:600;
+  font-size:12px;
+  text-align:left;
+  color:#fff;
+	mix-blend-mode:normal;
+}
+
+ul li:hover{
+  background-color:#2A2A2A;
+	cursor:pointer;
+
+}
+
+ul li a{
+	position:relative;
+}
+
+ul li:hover a{
+	mix-blend-mode:screen;
+	color:#ff00ff;
+	-webkit-animation: wiggle1 0.1s;
+}
+
+
+ul li:hover a::before{
+	content: "button";
+	position: absolute;
+	top: 0px;
+	left: -1%;
+	color:#ffff00 ;
+	mix-blend-mode:screen;
+  -webkit-animation: wiggle2 0.1s;
+}
+
+ul li:hover a::after{
+	content: "button";
+	position: absolute;
+	top: 0px;
+	left: 1%;
+	color: #00ffff;
+	mix-blend-mode:screen;
+  -webkit-animation: wiggle3 0.1s;
+}
+

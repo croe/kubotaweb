@@ -1,0 +1,106 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Nunito+Sans:ital,opsz,wdth,wght,YTLC@0,6..12,75..125,200..1000,440..540;1,6..12,75..125,200..1000,440..540&display=swap');
+@-webkit-keyframes wiggle1 {
+    0% { -webkit-transform: translate(0%, 0%); } 
+    10% { -webkit-transform: translate(0%, 0%); }
+    20% { -webkit-transform: translate(0%, 0%); }
+    30% { -webkit-transform: translate(0%, 30%); }
+    40% { -webkit-transform: translate(0%, 0%); }
+    50% { -webkit-transform: translate(0%, 0%); }
+    60% { -webkit-transform: translate(0%, 0%); }
+    70% { -webkit-transform: translate(0%, 0%); }
+    80% { -webkit-transform: translate(0%, 0%); }
+    90% { -webkit-transform: translate(0%, -20%); }
+    100% { -webkit-transform: translate(0%, 0%); }
+}
+@-webkit-keyframes wiggle2 {
+    0% { -webkit-transform: translate(0%, 10%); } 
+    10% { -webkit-transform: translate(0%, 0%); }
+    20% { -webkit-transform: translate(0%, 0%); }
+    30% { -webkit-transform: translate(0%, 0%); }
+    40% { -webkit-transform: translate(0%, 0%); }
+    50% { -webkit-transform: translate(0%, -30%); }
+    60% { -webkit-transform: translate(0%, 0%); }
+    70% { -webkit-transform: translate(0%, 0%); }
+    80% { -webkit-transform: translate(0%, 30%); }
+    90% { -webkit-transform: translate(0%, 0%); }
+    100% { -webkit-transform: translate(0%, 0%); }
+}
+@-webkit-keyframes wiggle3 {
+    0% { -webkit-transform: translate(0%, -10%); } 
+    10% { -webkit-transform: translate(0%, 0%); }
+    20% { -webkit-transform: translate(0%, -30%); }
+    30% { -webkit-transform: translate(0%, 0%); }
+    40% { -webkit-transform: translate(0%, 0%); }
+    50% { -webkit-transform: translate(0%, 0%); }
+    60% { -webkit-transform: translate(0%, 0%); }
+    70% { -webkit-transform: translate(0%, 20%); }
+    80% { -webkit-transform: translate(0%, 0%); }
+    90% { -webkit-transform: translate(0%, 0%); }
+    100% { -webkit-transform: translate(0%, 0%); }
+}
+
+
+* {padding:0;margin:0;}
+
+html {width:100%;height:100%;}
+
+body { 
+  width:100%;
+  height:100%;
+  background:#C0C0C0;
+  color:#613AFF;
+  font-family: "Big Shoulders", sans-serif;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+header {
+  display:flex;
+  width:fit-content;
+  height:fit-content;
+
+}
+
+header:hover {
+	cursor:pointer;
+}
+
+h1 {
+  position:relative;
+  font-family: "Big Shoulders", sans-serif;
+  font-weight:400;
+  font-size:120px;
+  text-align:center;
+  color:#613AFF;
+	mix-blend-mode:normal;
+}
+
+header:hover h1{
+	mix-blend-mode:screen;
+	color:#ff00ff;
+	-webkit-animation: wiggle1 0.1s;
+}
+
+header:hover h1::before{
+	content: "Kubota Nozomu";
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	color:#ffff00 ;
+	mix-blend-mode:screen;
+  -webkit-animation: wiggle2 0.1s;
+}
+
+header:hover h1::after{
+	content: "Kubota Nozomu";
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	color: #00ffff;
+	mix-blend-mode:screen;
+  -webkit-animation: wiggle3 0.1s;
+}
+
